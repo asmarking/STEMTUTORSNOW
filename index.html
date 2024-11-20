@@ -5,11 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM Tutors</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-        header { background: #4CAF50; color: white; padding: 1rem 0; text-align: center; }
-        nav a { margin: 0 15px; color: white; text-decoration: none; }
-        section { padding: 20px; }
-        footer { background: #333; color: white; text-align: center; padding: 10px 0; }
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom right, #f0f8ff, #e6ffe6);
+        }
+        h1, h2 {
+            color: #2e8b57;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
+        header {
+            background: #2e8b57;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Sections */
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            margin-bottom: 15px;
+        }
+        section p, ul {
+            margin: 10px 0;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #2e8b57;
+            color: white;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #246d48;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -21,25 +97,31 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+
     <section id="about">
         <h2>About Us</h2>
-        <p>We provide expert STEM tutoring for K-12 and college students. Our goal is to help students excel in their studies and build a strong foundation in STEM subjects.</p>
+        <p>Welcome to STEM Tutors! We are dedicated to helping students of all levels excel in STEM subjects, building confidence and skills for the future. With personalized tutoring tailored to each student's needs, we ensure success in math, science, and more.</p>
     </section>
+
     <section id="services">
         <h2>Our Services</h2>
         <ul>
-            <li>Math Tutoring ($35/hour for K-6, $45/hour for 6-12)</li>
-            <li>Physics and Chemistry Tutoring</li>
-            <li>Coding Lessons</li>
+            <li><strong>Math Tutoring:</strong> $35/hour for K-6, $45/hour for 6-12</li>
+            <li><strong>Physics and Chemistry Tutoring</strong></li>
+            <li><strong>Coding Lessons:</strong> Learn Python, JavaScript, or HTML!</li>
         </ul>
+        <a href="#contact" class="btn">Book a Session</a>
     </section>
+
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>Payment: Zelle or PayPal accepted</p>
+        <p>Payment Options: Zelle, PayPal, Venmo</p>
+        <a href="mailto:your-email@example.com" class="btn">Contact Us</a>
     </section>
+
     <footer>
-        <p>&copy; 2024 STEM Tutors</p>
+        <p>&copy; 2024 STEM Tutors. All Rights Reserved.</p>
     </footer>
 </body>
-</html
+</html>
