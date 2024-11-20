@@ -1,153 +1,79 @@
-
-Here’s how to make your website scrollable, with each section styled to look like a full-page view for the About, Services, and Contact Us sections. I’ll use CSS scroll snapping for smooth transitions between sections.
-
-html
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>STEM Tutors</title>
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            scroll-behavior: smooth;
-        }
-        body {
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-        }
-        section {
-            height: 100vh; /* Full viewport height */
-            scroll-snap-align: start;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        /* Header Styles */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #2e8b57;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            z-index: 1000;
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #f0f8ff;
-        }
-
-        /* About Section */
-        #about {
-            background: linear-gradient(to bottom right, #f0f8ff, #e6ffe6);
-            text-align: center;
-        }
-        #about h2 {
-            color: #2e8b57;
-        }
-
-        /* Services Section */
-        #services {
-            background: linear-gradient(to bottom right, #ffe6cc, #ffebf0);
-            text-align: center;
-        }
-        #services h2 {
-            color: #cc5500;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            background: #2e8b57;
-            color: white;
-            border-radius: 5px;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #246d48;
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(to bottom right, #d9f2ff, #ccf2ff);
-            text-align: center;
-        }
-        #contact h2 {
-            color: #005f99;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            background: #333;
-            color: white;
-            padding: 10px 0;
-            width: 100%;
-        }
-        footer p {
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>STEM Tutors</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>STEM Tutors</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h2>Empowering Students in STEM</h2>
+            <p>Expert tutoring to help students excel in Math, Science, and Technology.</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to STEM Tutors! We are dedicated to helping students of all levels excel in STEM subjects, building confidence and skills for the future. With personalized tutoring tailored to each student's needs, we ensure success in math, science, and more.</p>
+        <div class="container">
+            <h2>About Us</h2>
+            <p>STEM Tutors specializes in personalized learning experiences for students at all levels. Our mission is to build confidence, improve grades, and inspire a love for STEM subjects through one-on-one tutoring and small group sessions.</p>
+        </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li><strong>Math Tutoring:</strong> $35/hour for K-6, $45/hour for 6-12</li>
-            <li><strong>Physics and Chemistry Tutoring</strong></li>
-            <li><strong>Coding Lessons:</strong> Learn Python, JavaScript, or HTML!</li>
-        </ul>
-        <a href="#contact" class="btn">Book a Session</a>
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Math Tutoring</h3>
+                    <p>Build a strong foundation in math, from basic arithmetic to advanced calculus.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Science Tutoring</h3>
+                    <p>Master subjects like Physics, Chemistry, and Biology with expert guidance.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Programming Lessons</h3>
+                    <p>Learn coding languages like Python, JavaScript, and HTML to prepare for the future.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p>Payment Options: Zelle, PayPal, Venmo</p>
-        <a href="mailto:your-email@example.com" class="btn">Contact Us</a>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Ready to start your STEM journey? Contact us today!</p>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 STEM Tutors. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 STEM Tutors. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
+
