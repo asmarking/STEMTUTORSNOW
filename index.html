@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEM Tutoring Services</title>
+    <title>STEM Tutors Now</title>
     <style>
         /* General Reset */
         * {
@@ -15,63 +15,80 @@
             font-family: 'Roboto', sans-serif;
             color: #333;
             line-height: 1.6;
-            margin: 0;
-            background-color: #f8fafc;
+            background-color: #f8f8f8;
         }
 
-        /* Header Section */
-        header {
-            background: linear-gradient(to right, #3a86ff, #8338ec);
+        /* Navigation */
+        nav {
+            background: #ff8c00;
             color: white;
-            padding: 60px 20px;
+            padding: 15px 20px;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
-        header h1 {
-            font-size: 2.8rem;
+        nav h1 {
+            font-size: 1.8rem;
             font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+        .hero h1 {
+            font-size: 2.8rem;
             margin-bottom: 10px;
         }
-        header p {
+        .hero p {
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
-        header button {
-            background-color: #ffbe0b;
-            color: #333;
-            padding: 10px 20px;
+        .hero button {
+            background: #ff6600;
+            color: white;
             border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
             font-size: 1rem;
+            border-radius: 5px;
             cursor: pointer;
             transition: background 0.3s ease;
         }
-        header button:hover {
-            background-color: #ffd166;
+        .hero button:hover {
+            background: #e65c00;
         }
 
         /* Features Section */
-        .features-block {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            flex-wrap: wrap;
+        .features {
             padding: 60px 20px;
-            background-color: white;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2rem;
+            color: #ff8c00;
+            margin-bottom: 40px;
         }
         .feature {
-            max-width: 300px;
-            text-align: center;
-            margin: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
         }
         .feature img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 20px;
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        .feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .feature div {
+            max-width: 500px;
+            text-align: left;
         }
         .feature h3 {
+            color: #333;
             font-size: 1.5rem;
-            color: #3a86ff;
             margin-bottom: 10px;
         }
         .feature p {
@@ -79,81 +96,107 @@
             color: #555;
         }
 
-        /* Contact Information */
-        .contact-info {
-            text-align: center;
+        /* Contact Section */
+        .contact {
+            background: #fff0e6;
             padding: 40px 20px;
-            background: #e6f2ff;
+            text-align: center;
         }
-        .contact-info h2 {
+        .contact h2 {
             font-size: 1.8rem;
-            color: #3a86ff;
-            margin-bottom: 10px;
+            color: #ff8c00;
+            margin-bottom: 20px;
         }
-        .contact-info p {
+        .contact p {
             font-size: 1.1rem;
             color: #555;
-            margin: 5px 0;
+            margin: 10px 0;
+        }
+        .contact p a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact p a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
         footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #3a86ff;
+            background: #ff8c00;
             color: white;
+            text-align: center;
+            padding: 15px 20px;
             font-size: 0.9rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            header h1 {
+            .hero h1 {
                 font-size: 2.2rem;
             }
-            .features-block {
-                flex-direction: column;
-                align-items: center;
+            .features h2 {
+                font-size: 1.8rem;
             }
             .feature {
-                max-width: 90%;
+                flex-direction: column;
+            }
+            .feature img {
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Excel in STEM with Expert Tutors</h1>
-    <p>Personalized lessons in Math, Science, and Coding to help you succeed.</p>
+<!-- Navigation -->
+<nav>
+    <h1>STEM Tutors Now</h1>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Unlock STEM Success!</h1>
+    <p>Expert Math, Science, and Coding tutoring by professionals from top universities.</p>
     <button onclick="location.href='#contact'">Get Started</button>
-</header>
+</section>
 
-<section class="features-block">
+<!-- Features Section -->
+<section class="features">
+    <h2>Why Choose STEM Tutors Now?</h2>
     <div class="feature">
-        <img src="math-tutoring-icon.png" alt="Math Tutoring">
-        <h3>Math Tutoring</h3>
-        <p>Master every concept, from basic arithmetic to advanced calculus.</p>
+        <img src="expert-tutors.jpg" alt="Expert Tutors">
+        <div>
+            <h3>Expert Tutors</h3>
+            <p>Tutors are professionals with degrees from top universities.</p>
+        </div>
     </div>
     <div class="feature">
-        <img src="science-tutoring-icon.png" alt="Science Tutoring">
-        <h3>Science Tutoring</h3>
-        <p>Explore the mysteries of physics, chemistry, and biology with ease.</p>
+        <img src="comprehensive-subjects.jpg" alt="Comprehensive Subjects">
+        <div>
+            <h3>Comprehensive Subjects</h3>
+            <p>Covering Math, Science, and Coding to build a solid STEM foundation.</p>
+        </div>
     </div>
     <div class="feature">
-        <img src="coding-tutoring-icon.png" alt="Coding Tutoring">
-        <h3>Coding Tutoring</h3>
-        <p>Develop your programming skills and build a tech-driven future.</p>
+        <img src="personalized-lessons.jpg" alt="Personalized Lessons">
+        <div>
+            <h3>Personalized Lessons</h3>
+            <p>Sessions tailored to suit individual learning needs.</p>
+        </div>
     </div>
 </section>
 
-<section class="contact-info" id="contact">
+<!-- Contact Section -->
+<section class="contact" id="contact">
     <h2>Contact Information</h2>
-    <p>Email: contact@stemtutoring.com</p>
-    <p>Phone: (123) 456-7890</p>
+    <p>Phone: <a href="tel:6192548222">619-254-8222</a></p>
+    <p>Email: <a href="mailto:stemtutorsnow@gmail.com">stemtutorsnow@gmail.com</a></p>
 </section>
 
+<!-- Footer -->
 <footer>
-    <p>&copy; 2024 STEM Tutoring Services. All Rights Reserved.</p>
+    <p>&copy; 2024 STEM Tutors Now. All Rights Reserved.</p>
 </footer>
 
 </body>
