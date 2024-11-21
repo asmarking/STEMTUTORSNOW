@@ -5,199 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM Tutors Now</title>
     <style>
-        /* General Reset */
-        * {
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
             color: #333;
-            line-height: 1.6;
-            background-color: #f8f8f8;
         }
-
-        /* Navigation */
-        nav {
-            background: #ff8c00;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
+        h1, h2, h3 {
+            color: #ff6600; /* Dark Orange */
         }
-        nav h1 {
-            font-size: 1.8rem;
-            font-weight: bold;
+        a {
+            text-decoration: none;
+            color: #ff6600;
         }
-
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
         /* Hero Section */
         .hero {
-            background: url('hero-image.jpg') no-repeat center center/cover;
+            background: url('https://via.placeholder.com/1200x500') no-repeat center center;
+            background-size: cover;
             color: white;
             text-align: center;
             padding: 100px 20px;
-            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
         }
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin: 0;
         }
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        .hero button {
-            background: #ff6600;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .hero button:hover {
-            background: #e65c00;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .features h2 {
-            font-size: 2rem;
-            color: #ff8c00;
-            margin-bottom: 40px;
-        }
-        .feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .feature img {
-            max-width: 150px;
-            margin-right: 20px;
-        }
-        .feature:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .feature div {
-            max-width: 500px;
-            text-align: left;
-        }
-        .feature h3 {
-            color: #333;
             font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        .feature p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: #fff0e6;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .contact h2 {
-            font-size: 1.8rem;
-            color: #ff8c00;
-            margin-bottom: 20px;
-        }
-        .contact p {
-            font-size: 1.1rem;
-            color: #555;
             margin: 10px 0;
         }
-        .contact p a {
-            color: #ff6600;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact p a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: #ff8c00;
+        .hero .cta-btn {
+            display: inline-block;
+            background-color: #ff6600;
             color: white;
-            text-align: center;
-            padding: 15px 20px;
-            font-size: 0.9rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            margin-top: 20px;
         }
-
+        /* Features Section */
+        .features {
+            background: #f9f9f9;
+            padding: 50px 20px;
+        }
+        .features .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .features .feature img {
+            width: 150px;
+            margin-right: 20px;
+        }
+        .features .feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fff3e0; /* Light Orange */
+        }
+        .contact a {
+            display: block;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .contact i {
+            margin-right: 10px;
+        }
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .features h2 {
-                font-size: 1.8rem;
-            }
-            .feature {
+            .features .feature {
                 flex-direction: column;
+                text-align: center;
             }
-            .feature img {
-                margin-bottom: 20px;
+            .features .feature img {
+                margin-bottom: 15px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Unlock STEM Success!</h1>
+        <p>Expert Math, Science, and Coding tutoring by professionals from top universities.</p>
+        <a href="#contact" class="cta-btn">Get Started</a>
+    </header>
 
-<!-- Navigation -->
-<nav>
-    <h1>STEM Tutors Now</h1>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Unlock STEM Success!</h1>
-    <p>Expert Math, Science, and Coding tutoring by professionals from top universities.</p>
-    <button onclick="location.href='#contact'">Get Started</button>
-</section>
-
-<!-- Features Section -->
-<section class="features">
-    <h2>Why Choose STEM Tutors Now?</h2>
-    <div class="feature">
-        <img src="expert-tutors.jpg" alt="Expert Tutors">
-        <div>
-            <h3>Expert Tutors</h3>
-            <p>Tutors are professionals with degrees from top universities.</p>
+    <!-- Features Section -->
+    <section class="features container">
+        <h2>Why Choose STEM Tutors Now?</h2>
+        <div class="feature">
+            <img src="https://via.placeholder.com/150" alt="Expert Tutors">
+            <div>
+                <h3>Expert Tutors</h3>
+                <p>Our tutors are professionals with degrees from top universities.</p>
+            </div>
         </div>
-    </div>
-    <div class="feature">
-        <img src="comprehensive-subjects.jpg" alt="Comprehensive Subjects">
-        <div>
-            <h3>Comprehensive Subjects</h3>
-            <p>Covering Math, Science, and Coding to build a solid STEM foundation.</p>
+        <div class="feature">
+            <img src="https://via.placeholder.com/150" alt="Comprehensive Subjects">
+            <div>
+                <h3>Comprehensive Subjects</h3>
+                <p>We cover Math, Science, and Coding to build a solid STEM foundation.</p>
+            </div>
         </div>
-    </div>
-    <div class="feature">
-        <img src="personalized-lessons.jpg" alt="Personalized Lessons">
-        <div>
-            <h3>Personalized Lessons</h3>
-            <p>Sessions tailored to suit individual learning needs.</p>
+        <div class="feature">
+            <img src="https://via.placeholder.com/150" alt="Personalized Lessons">
+            <div>
+                <h3>Personalized Lessons</h3>
+                <p>Sessions are tailored to suit individual learning needs.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
-    <h2>Contact Information</h2>
-    <p>Phone: <a href="tel:6192548222">619-254-8222</a></p>
-    <p>Email: <a href="mailto:stemtutorsnow@gmail.com">stemtutorsnow@gmail.com</a></p>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 STEM Tutors Now. All Rights Reserved.</p>
-</footer>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p><a href="tel:6192548222"><i class="fas fa-phone"></i>619-254-8222</a></p>
+        <p><a href="mailto:stemtutorsnow@gmail.com"><i class="fas fa-envelope"></i>stemtutorsnow@gmail.com</a></p>
+    </section>
+</body>
+</html>
 
 </body>
 </html>
