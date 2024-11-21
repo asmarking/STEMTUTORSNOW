@@ -3,77 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEM Tutors</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tutoring Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #f4f4f4;
+            padding: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4facfe;
+        }
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .service {
+            text-align: center;
+            max-width: 300px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #4facfe;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #00f2fe;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>STEM Tutors</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h2>Empowering Students in STEM</h2>
-            <p>Expert tutoring to help students excel in Math, Science, and Technology.</p>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
-    </section>
+<header>
+    <h1>Excel in Math, Science, & Coding with Expert Tutors</h1>
+    <p>Tailored lessons for every learner's success</p>
+</header>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>STEM Tutors specializes in personalized learning experiences for students at all levels. Our mission is to build confidence, improve grades, and inspire a love for STEM subjects through one-on-one tutoring and small group sessions.</p>
-        </div>
-    </section>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <h3>Math Tutoring</h3>
-                    <p>Build a strong foundation in math, from basic arithmetic to advanced calculus.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Science Tutoring</h3>
-                    <p>Master subjects like Physics, Chemistry, and Biology with expert guidance.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Programming Lessons</h3>
-                    <p>Learn coding languages like Python, JavaScript, and HTML to prepare for the future.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="home" class="section">
+    <h2>Welcome to Your Learning Journey</h2>
+    <p>Achieve academic excellence with personalized tutoring sessions in Math, Science, and Coding.</p>
+    <button onclick="location.href='#services'">Get Started</button>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Ready to start your STEM journey? Contact us today!</p>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Math Tutoring</h3>
+            <p>Master mathematical concepts with expert guidance.</p>
         </div>
-    </section>
+        <div class="service">
+            <h3>Science Tutoring</h3>
+            <p>Explore the wonders of science with our tailored sessions.</p>
+        </div>
+        <div class="service">
+            <h3>Coding Tutoring</h3>
+            <p>Learn to code and build your future in technology.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 STEM Tutors. All rights reserved.</p>
-        </div>
-    </footer>
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Tutoring Services. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
+
 
