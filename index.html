@@ -3,129 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoring Services</title>
+    <title>STEM Tutoring Services</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: #333;
         }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f8fafc;
+        }
+
+        /* Header Section */
         header {
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            padding: 20px;
-            text-align: center;
+            background: linear-gradient(to right, #3a86ff, #8338ec);
             color: white;
+            padding: 60px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #f4f4f4;
-            padding: 10px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
+        header h1 {
+            font-size: 2.8rem;
             font-weight: bold;
+            margin-bottom: 10px;
         }
-        nav a:hover {
-            color: #4facfe;
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
-        .section {
-            padding: 40px;
-            text-align: center;
-        }
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-        .service {
-            text-align: center;
-            max-width: 300px;
-        }
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea, .contact-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background: #4facfe;
-            color: white;
+        header button {
+            background-color: #ffbe0b;
+            color: #333;
+            padding: 10px 20px;
             border: none;
+            border-radius: 5px;
+            font-size: 1rem;
             cursor: pointer;
+            transition: background 0.3s ease;
         }
-        .contact-form button:hover {
-            background: #00f2fe;
+        header button:hover {
+            background-color: #ffd166;
         }
+
+        /* Features Section */
+        .features-block {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+            background-color: white;
+        }
+        .feature {
+            max-width: 300px;
+            text-align: center;
+            margin: 20px;
+        }
+        .feature img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .feature h3 {
+            font-size: 1.5rem;
+            color: #3a86ff;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            text-align: center;
+            padding: 40px 20px;
+            background: #e6f2ff;
+        }
+        .contact-info h2 {
+            font-size: 1.8rem;
+            color: #3a86ff;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background: #f4f4f4;
+            background-color: #3a86ff;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            .features-block {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Excel in Math, Science, & Coding with Expert Tutors</h1>
-    <p>Tailored lessons for every learner's success</p>
+    <h1>Excel in STEM with Expert Tutors</h1>
+    <p>Personalized lessons in Math, Science, and Coding to help you succeed.</p>
+    <button onclick="location.href='#contact'">Get Started</button>
 </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="home" class="section">
-    <h2>Welcome to Your Learning Journey</h2>
-    <p>Achieve academic excellence with personalized tutoring sessions in Math, Science, and Coding.</p>
-    <button onclick="location.href='#services'">Get Started</button>
-</section>
-
-<section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="service">
-            <h3>Math Tutoring</h3>
-            <p>Master mathematical concepts with expert guidance.</p>
-        </div>
-        <div class="service">
-            <h3>Science Tutoring</h3>
-            <p>Explore the wonders of science with our tailored sessions.</p>
-        </div>
-        <div class="service">
-            <h3>Coding Tutoring</h3>
-            <p>Learn to code and build your future in technology.</p>
-        </div>
+<section class="features-block">
+    <div class="feature">
+        <img src="math-tutoring-icon.png" alt="Math Tutoring">
+        <h3>Math Tutoring</h3>
+        <p>Master every concept, from basic arithmetic to advanced calculus.</p>
+    </div>
+    <div class="feature">
+        <img src="science-tutoring-icon.png" alt="Science Tutoring">
+        <h3>Science Tutoring</h3>
+        <p>Explore the mysteries of physics, chemistry, and biology with ease.</p>
+    </div>
+    <div class="feature">
+        <img src="coding-tutoring-icon.png" alt="Coding Tutoring">
+        <h3>Coding Tutoring</h3>
+        <p>Develop your programming skills and build a tech-driven future.</p>
     </div>
 </section>
 
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Subject">
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+<section class="contact-info" id="contact">
+    <h2>Contact Information</h2>
+    <p>Email: contact@stemtutoring.com</p>
+    <p>Phone: (123) 456-7890</p>
 </section>
 
 <footer>
-    <p>&copy; 2024 Tutoring Services. All Rights Reserved.</p>
+    <p>&copy; 2024 STEM Tutoring Services. All Rights Reserved.</p>
 </footer>
 
 </body>
 </html>
-
-
