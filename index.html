@@ -4,137 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM Tutors Now</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #ffffff;
+            background: #1E1E3F;
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
         h1, h2, h3 {
-            color: #ff6600; /* Dark Orange */
+            margin: 0;
+            font-weight: 700;
         }
-        a {
-            text-decoration: none;
-            color: #ff6600;
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .header .logo {
+            font-size: 1.8rem;
+            color: #ffffff;
         }
+
         /* Hero Section */
         .hero {
-            background: url('https://via.placeholder.com/1200x500') no-repeat center center;
+            height: 100vh;
+            background: linear-gradient(rgba(30, 30, 63, 0.8), rgba(30, 30, 63, 0.8)), url('./main-image2.jpg') no-repeat center center;
             background-size: cover;
-            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 100px 20px;
+            color: #ffffff;
+            padding: 0 20px;
         }
         .hero h1 {
-            font-size: 3rem;
-            margin: 0;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
         .hero p {
             font-size: 1.5rem;
-            margin: 10px 0;
+            max-width: 600px;
         }
-        .hero .cta-btn {
-            display: inline-block;
-            background-color: #ff6600;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        /* Features Section */
-        .features {
-            background: #f9f9f9;
-            padding: 50px 20px;
-        }
-        .features .feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        .features .feature img {
-            width: 150px;
-            margin-right: 20px;
-        }
-        .features .feature:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+
+       /* Features Section */
+/* Features Section */
+.features {
+    background: #28284D;
+    text-align: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+.features h2 {
+    font-size: 2.5rem;
+    color: #ffcc33;
+    margin-bottom: 20px;
+}
+.features-intro {
+    font-size: 1.2rem;
+    color: #d2c8ff;
+    margin-bottom: 60px; /* Increased space between paragraph and grid */
+    max-width: 800px;
+    margin: 20px auto;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+.feature {
+    background: #1E1E3F;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+}
+.feature h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.feature p {
+    font-size: 1rem;
+    color: #d2c8ff;
+}
+.feature:hover {
+    transform: translateY(-10px);
+    background-color: #373759;
+}
+.stats {
+    margin: 40px auto 0;
+    text-align: left;
+    max-width: 800px;
+}
+.stats h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.stats ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: #d2c8ff;
+}
+.stats li {
+    margin-bottom: 10px;
+}
+
+
         /* Contact Section */
         .contact {
-            padding: 50px 20px;
+            height: auto;
+            background: linear-gradient(rgba(30, 30, 63, 0.8), rgba(30, 30, 63, 0.8)), url('./contact-bg.jpg') no-repeat center center;
+            background-size: cover;
             text-align: center;
-            background: #fff3e0; /* Light Orange */
+            color: #ffffff;
+            padding: 100px 20px;
         }
-        .contact a {
-            display: block;
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .contact p {
             font-size: 1.2rem;
-            margin: 10px 0;
+            margin-bottom: 30px;
         }
-        .contact i {
-            margin-right: 10px;
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
         }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .features .feature {
-                flex-direction: column;
-                text-align: center;
-            }
-            .features .feature img {
-                margin-bottom: 15px;
-            }
+        .contact-form label {
+            font-size: 1.2rem;
+            align-self: flex-start;
+        }
+        .contact-form input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #1E1E3F;
+            border: 1px solid #ffcc33;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            display: none; /* Buttons are no longer needed */
+        }
+
+        /* Footer */
+        .footer {
+            background: #1E1E3F;
+            padding: 20px;
+            text-align: center;
+            color: #d2c8ff;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <h1>Unlock STEM Success!</h1>
-        <p>Expert Math, Science, and Coding tutoring by professionals from top universities.</p>
-        <a href="#contact" class="cta-btn">Get Started</a>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">STEM Tutors Now</a>
     </header>
 
-    <!-- Features Section -->
-    <section class="features container">
-        <h2>Why Choose STEM Tutors Now?</h2>
-        <div class="feature">
-            <img src="https://via.placeholder.com/150" alt="Expert Tutors">
-            <div>
-                <h3>Expert Tutors</h3>
-                <p>Our tutors are professionals with degrees from top universities.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="https://via.placeholder.com/150" alt="Comprehensive Subjects">
-            <div>
-                <h3>Comprehensive Subjects</h3>
-                <p>We cover Math, Science, and Coding to build a solid STEM foundation.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="https://via.placeholder.com/150" alt="Personalized Lessons">
-            <div>
-                <h3>Personalized Lessons</h3>
-                <p>Sessions are tailored to suit individual learning needs.</p>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empowering STEM Success</h1>
+        <p>Providing expert tutoring in Math, Science, and Coding for high school students.</p>
     </section>
+
+    <!-- Features Section -->
+    <!-- Features Section -->
+<!-- Features Section -->
+<section class="features" id="features">
+    <h2>Our Tutoring Services</h2>
+    <p class="features-intro">
+        We specialize in empowering students to excel in Math, Science, and Coding through personalized, expert-guided lessons tailored to your child’s unique needs.
+    </p>
+    <div class="features-grid">
+        <div class="feature">
+            <h3>Expert Tutors</h3>
+            <p>Our team of experienced tutors holds advanced degrees and specializes in making STEM subjects engaging and relatable for students.</p>
+        </div>
+        <div class="feature">
+            <h3>Comprehensive Subjects</h3>
+            <p>We cover all major STEM topics, including Algebra, Geometry, Chemistry, Physics, and Python programming, ensuring your child’s academic success.</p>
+        </div>
+        <div class="feature">
+            <h3>Personalized Lessons</h3>
+            <p>We tailor each session to match your child’s learning style, pace, and academic goals, building confidence and fostering a love for learning.</p>
+        </div>
+    </div>
+    <div class="stats">
+        <h3>Why Choose STEM Tutors Now?</h3>
+        <ul>
+            <li>98% of students improve their grades within the first semester.</li>
+            <li>Over 5,000 hours of tutoring experience across all STEM subjects.</li>
+            <li>Flexible schedules to accommodate your child’s needs.</li>
+        </ul>
+    </div>
+</section>
+
+
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p><a href="tel:6192548222"><i class="fas fa-phone"></i>619-254-8222</a></p>
-        <p><a href="mailto:stemtutorsnow@gmail.com"><i class="fas fa-envelope"></i>stemtutorsnow@gmail.com</a></p>
+        <p>Have questions or want to get started? Fill out the form below, and we’ll reach out shortly!</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfpBFW8nTRuP_y6uUepOVCpXpawk_8-M0QHAZ48reT1_s6-Kw/viewform?embedded=true" width="640" height="951" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 STEM Tutors Now. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 
-</body>
-</html>
 
+    
