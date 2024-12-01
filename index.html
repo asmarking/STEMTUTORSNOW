@@ -148,30 +148,54 @@
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .contact-form label {
-            font-size: 1.2rem;
-            align-self: flex-start;
-        }
-        .contact-form input {
-            width: 100%;
-            padding: 15px;
-            font-size: 1rem;
-            color: #ffffff;
-            background-color: #1E1E3F;
-            border: 1px solid #ffcc33;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            display: none; /* Buttons are no longer needed */
-        }
+        /* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1E1E3F; /* Dark background for form */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    text-align: left;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #ffcc33; /* Gold for labels */
+}
+.contact-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #28284D; /* Slightly lighter than form background */
+    border: 1px solid #ffcc33; /* Gold border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.contact-form input::placeholder {
+    color: #d2c8ff; /* Light placeholder color */
+}
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #1E1E3F;
+    background: #ffcc33; /* Gold button */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+.contact-form button:hover {
+    background-color: #ffffff; /* Lighten button on hover */
+    transform: scale(1.05);
+}
+
 
         /* Footer */
         .footer {
@@ -233,7 +257,16 @@
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <p>Have questions or want to get started? Fill out the form below, and we’ll reach out shortly!</p>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfpBFW8nTRuP_y6uUepOVCpXpawk_8-M0QHAZ48reT1_s6-Kw/viewform?embedded=true" width="640" height="951" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+            <label for="parent-name">Parent's Name</label>
+            <input type="text" id="parent-name" name="parent-name" placeholder="Enter your name" required>
+        
+            <label for="email">Phone Number or Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
         
     </section>
 
