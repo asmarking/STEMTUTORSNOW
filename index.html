@@ -62,9 +62,10 @@
         }
 
         /* Scroll Down Container */
+/* Scroll Down Container */
 .scroll-down {
     position: absolute;
-    bottom: 30px; /* Adjust to place above the footer */
+    bottom: 30px; /* Position just above the footer */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -75,23 +76,23 @@
     animation: fadeIn 2s ease-in-out infinite; /* Subtle attention effect */
 }
 
-/* Arrow Styling */
-.scroll-down .arrow {
-    width: 25px;
-    height: 25px;
-    border-left: 4px solid #ffcc33;
-    border-bottom: 4px solid #ffcc33;
-    transform: rotate(45deg);
-    margin: 10px auto;
-    animation: bounce 2s infinite ease-in-out;
-}
-
 /* Text Styling */
 .scroll-down span {
     display: block;
     margin-bottom: 10px;
     font-size: 1rem;
     font-weight: bold;
+}
+
+/* Arrow Styling */
+.scroll-down .arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 4px solid #ffcc33; /* Right edge of the arrow */
+    border-bottom: 4px solid #ffcc33; /* Bottom edge of the arrow */
+    transform: rotate(45deg); /* Rotate to make it point down */
+    margin: 0 auto;
+    animation: bounce 2s infinite ease-in-out; /* Bounce effect */
 }
 
 /* Fade-In Animation */
@@ -103,8 +104,9 @@
 /* Bounce Animation */
 @keyframes bounce {
     0%, 100% { transform: translateY(0) rotate(45deg); }
-    50% { transform: translateY(10px) rotate(45deg); }
+    50% { transform: translateY(10px) rotate(45deg); } /* Moves down slightly */
 }
+
 
        /* Features Section */
 /* Features Section */
