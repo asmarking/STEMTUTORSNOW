@@ -61,6 +61,51 @@
             max-width: 600px;
         }
 
+        /* Scroll Down Container */
+.scroll-down {
+    position: absolute;
+    bottom: 30px; /* Adjust to place above the footer */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffcc33; /* Gold color */
+    font-size: 1rem;
+    cursor: pointer;
+    animation: fadeIn 2s ease-in-out infinite; /* Subtle attention effect */
+}
+
+/* Arrow Styling */
+.scroll-down .arrow {
+    width: 25px;
+    height: 25px;
+    border-left: 4px solid #ffcc33;
+    border-bottom: 4px solid #ffcc33;
+    transform: rotate(45deg);
+    margin: 10px auto;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Text Styling */
+.scroll-down span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(45deg); }
+    50% { transform: translateY(10px) rotate(45deg); }
+}
+
        /* Features Section */
 /* Features Section */
 .features {
@@ -217,6 +262,10 @@
     <section class="hero">
         <h1>Online tutoring in Math, Science, and Coding for high school students.</h1>
         <!-- <p>Online tutoring in Math, Science, and Coding for high school students.</p> -->
+        <div class="scroll-down">
+            <span>Scroll Down</span>
+            <div class="arrow"></div>
+        </div>
     </section>
 
     <!-- Features Section -->
